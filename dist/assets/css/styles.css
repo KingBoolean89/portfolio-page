@@ -1,0 +1,176 @@
+#wrapper{
+    position: relative;
+    width:100%;
+    min-height:55vw;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .hideme
+{
+    opacity:0;
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #my-content { display: none; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  #my-content { display: block; }   /* hide it elsewhere */
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:black; /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color:black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid white;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height:80% ;
+}
+.modal-iframe{
+  height:100%;
+  width:100%;
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+  .layer{
+    position: absolute;
+    width:100vw;
+    min-height: 55vw;
+    overflow: hidden;
+  }
+  iframe{
+    margin:10px;
+    width:25%;
+  }
+  .overlay {
+    position: absolute;
+    min-width: 100%; 
+    min-height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+  }
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+  }
+  
+  
+  .layer .content1-wrap{
+    position: absolute;
+    width:100vw;
+    min-height: 55vw;
+  }
+  
+  .layer .content1-body{
+    width:25%;
+    position:absolute;
+    top:50%;
+    text-align: center;
+    transform:translateY(-50%);
+    color:#fff;
+  }
+  
+  .layer img{
+    position: absolute;
+    width:32%;
+    top:40%;
+    left: 42%;
+    transform:translate(-50%, -50%);
+  }
+  
+  .layer h1{
+    font-size:2em;
+  }
+  
+  .bottom{
+    background:#222;
+    z-index:1;
+  }
+  
+  .bottom .content1-body{
+    right:15%;
+  }
+  
+  .bottom h1{
+    color:#ffd700;
+  }
+  
+  .top{
+    background:#eee;
+    color:#222;
+    z-index:2;
+    width:50vw;
+  }
+  
+  .top .content1-body{
+    left: 0%;
+    color:#222;
+  }
+  
+  .handle{
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color:#ffd700;
+    width:5px;
+    top:0;
+    left: 50%;
+    z-index:3;
+  }
+  
+  .skewed .handle{
+    top:50%;
+    transform:rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin:top;
+  }
+  
+  .skewed .top{
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000px);
+  }
+  
+  .skewed .top .content1-wrap{
+    transform: skew(30deg);
+    margin-left:1000px;
+  }
+  
+  @media(max-width:768px){
+    body{
+      font-size:75%;
+    }
+  }
